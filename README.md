@@ -1,4 +1,4 @@
-# khinsider-crawler
+# khinsider-scraper
 
 This is a script for getting all links in a some download for direct downloads in khinsider.com.
 Because the website cannot donwload all songlist at once
