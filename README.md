@@ -1,10 +1,10 @@
 # Khinsider Scraper
 
 This is a script for getting all links in a some download for direct downloads in khinsider.com.
-Because the website cannot donwload all songlist at once
+Because the website cannot download all songlist at once
 
 # How To Use
-1. **Go to khinsider.com** and find what you want to donwload. In this example, i'm looking for donwload plant vs zombie music.
+1. **Go to khinsider.com** and find what you want to donwload. In this example, I'm looking to download plant vs zombie music.
 
 ![1](https://user-images.githubusercontent.com/110075636/230800726-f8b6111c-36b1-4b7f-987a-3240ddd6c8a9.png)
 
@@ -18,7 +18,7 @@ Because the website cannot donwload all songlist at once
 
 ![4](https://user-images.githubusercontent.com/110075636/230801209-d62dc8ac-a632-44b6-b44e-78a0c1983dc4.png)
 
-5. Alert menu will appear. **Choose** your download format. In here example i choose FLAC, then press **OK**
+5. Alert menu will appear. **Choose** your download format. In here example I choose FLAC, then press **OK**
 
 ![5](https://user-images.githubusercontent.com/110075636/230801312-2c8aaf1d-b502-4627-989c-3263cdbc61f9.png)
 
