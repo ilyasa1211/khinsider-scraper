@@ -42,6 +42,6 @@ You can use wget to download it automatically
 
 4. Open bash terminal
 
-5. Type `wget -a ~/Desktop/file.txt` and then <kbd>Enter</kbd>
+5. Type `wget -i ~/Desktop/file.txt` and then <kbd>Enter</kbd>
 
 6. Done, just wait for it to finish download
