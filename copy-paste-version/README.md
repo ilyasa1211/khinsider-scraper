@@ -14,7 +14,7 @@ Because the website cannot download all songlist at once
 
 ![3](https://user-images.githubusercontent.com/110075636/230801162-0246b26b-47c7-4028-8a51-5fdf66e0ff70.png)
 
-4. **Paste** the source code in the console terminal. And then press <kbd>Enter</kbd>
+4. **Paste** the source code that is ./dist/index.js in the console terminal. And then press <kbd>Enter</kbd>
 
 ![4](https://user-images.githubusercontent.com/110075636/230801209-d62dc8ac-a632-44b6-b44e-78a0c1983dc4.png)
 
@@ -22,7 +22,7 @@ Because the website cannot download all songlist at once
 
 ![5](https://user-images.githubusercontent.com/110075636/230801312-2c8aaf1d-b502-4627-989c-3263cdbc61f9.png)
 
-6. After that type <i>show()</i> to display all the links to the page
+6. All the download link is now in the page
 
 ![6](https://user-images.githubusercontent.com/110075636/230801381-cfe35869-97da-49c9-af6f-97cebfc25de3.png)
 
