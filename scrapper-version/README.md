@@ -1,4 +1,4 @@
-# Khinsider Scraper
+# Khinsider Scraper (Scraper Version)
 
 This is the scrapper version using nodejs and playwright
 

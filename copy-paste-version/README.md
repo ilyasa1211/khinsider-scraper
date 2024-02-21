@@ -1,4 +1,4 @@
-# Khinsider Scraper
+# Khinsider Scraper (Copy Paste Version)
 
 This is a script for getting all links in a some download for direct downloads in khinsider.com.
 Because the website cannot download all songlist at once

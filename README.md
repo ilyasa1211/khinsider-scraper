@@ -1,0 +1,13 @@
+# Khinsider Scraper
+
+I make two version to get the links:
+1. Copy paste version
+2. Scraper version
+
+## Copy Paste Version
+
+Just like the name, it is work by copy paste, It is copy paste the javascript code and paste it to the browser's console through developer tools
+
+## Scraper Version
+
+Basically you does not need to open any browser, you just need the url of the target, and then put it in the .env file, and start with npm start, it'll automatically write the download urls also downloads the music files for you.
