@@ -23,6 +23,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
+          cache-dependency-path: ./scrapper-version
       
       - name: Install dependencies
         run: npm ci
@@ -48,6 +49,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
+          cache-dependency-path: ./copy-paste-version
 
       - name: Install dependencies
         run: npm ci
