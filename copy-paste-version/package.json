@@ -3,6 +3,7 @@
     "esbuild": "0.20.1"
   },
   "scripts": {
-    "build": "tsc && esbuild ./dist/index.js --minify --allow-overwrite --outfile=./dist/index.js"
+    "build": "tsc && esbuild ./dist/index.js --minify --allow-overwrite --outfile=./dist/index.js",
+    "test": "echo \"No test specified\""
   }
 }
