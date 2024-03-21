@@ -24,8 +24,6 @@ Because the website cannot download all songlist at once
 
 6. All the download link is now in the page
 
-![6](https://user-images.githubusercontent.com/110075636/230801381-cfe35869-97da-49c9-af6f-97cebfc25de3.png)
-
 ![7](https://user-images.githubusercontent.com/110075636/230801388-d9f93847-ce31-4ec7-9921-6a16b7380aa1.png)
 
 7. That's it your get all the links you want.
