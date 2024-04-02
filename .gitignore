@@ -1,4 +1,5 @@
-scrapper-version/node_modules/
-scrapper-version/downloads/*
-scrapper-version/urls/*
-copy-paste-version/node_modules/
+/copy-paste-version/node_modules/
+
+/scraper-version/downloads/*
+/scraper-version/node_modules/
+/scraper-version/urls/*
