@@ -13,8 +13,8 @@ class FirstScrapper {
     static getTitle(page) {
         return __awaiter(this, void 0, void 0, function* () {
             const titleLocator = page.locator("#pageContent > h2:nth-child(2)");
-            const rawTitle = yield titleLocator.innerText(); // 'Plants vs. Zombies Original Soundtrackinfo'
-            return rawTitle.slice(0, rawTitle.lastIndexOf("info")); // 'Plants vs. Zombies Original Soundtrack'
+            const title = yield titleLocator.innerText();
+            return title;
         });
     }
     static getDownloadPageUrl(page, targetUrlOrigin) {

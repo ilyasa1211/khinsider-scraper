@@ -27,4 +27,6 @@ FROM build
 
 RUN ls /root/.cache/ms-playwright/chromium-1112/chrome-linux/
 
+USER node
+
 CMD [ "npm", "run", "start" ]

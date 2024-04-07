@@ -15,7 +15,8 @@
   },
   "scripts": {
     "build": "tsc",
-    "start": "node --env-file .env ./dist/index.js"
+    "start": "node --env-file .env ./dist",
+    "command": "node ./dist/commands"
   },
   "repository": {
     "type": "git",

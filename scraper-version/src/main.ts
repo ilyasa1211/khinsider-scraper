@@ -9,7 +9,6 @@ export default class Main {
   public static async main(): Promise<void> {
     const target = new URL(Config.targetUrl);
 
-    console.log(Config.chromeExecutablePath);
     console.log("Opening a browser...");
 
     const browser = await chromium.launch({
@@ -26,11 +25,12 @@ export default class Main {
     const title = await FirstScrapper.getTitle(page);
     const rows = await FirstScrapper.getDownloadPageUrl(page, target.origin);
 
+    console.log("Title: %s", title);
     console.log("Count: %d", rows.length);
-
+    
     // Second Page
-    for (let index = rows.length - 3; index < rows.length; index++) {
-      console.log("Getting download url for: ", rows[index].title);
+    for (let index = 0; index < rows.length; index++) {
+      console.log(index + 1, ".", "Getting download url for: ", rows[index].title);
 
       // Save the downloaded file to downloads directory
       const downloadUrl = await SecondScraper.download(

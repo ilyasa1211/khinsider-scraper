@@ -23,7 +23,9 @@ class Main {
         return __awaiter(this, void 0, void 0, function* () {
             const target = new URL(config_1.default.targetUrl);
             console.log("Opening a browser...");
-            const browser = yield playwright_1.chromium.launch();
+            const browser = yield playwright_1.chromium.launch({
+                executablePath: config_1.default.chromeExecutablePath,
+            });
             const page = yield browser.newPage();
             page.setDefaultTimeout(0);
             console.log("Searching the url: ", config_1.default.targetUrl);
@@ -33,7 +35,7 @@ class Main {
             const rows = yield firstScraper_1.default.getDownloadPageUrl(page, target.origin);
             console.log("Count: %d", rows.length);
             // Second Page
-            for (let index = rows.length - 3; index < rows.length; index++) {
+            for (let index = 0; index < rows.length; index++) {
                 console.log("Getting download url for: ", rows[index].title);
                 // Save the downloaded file to downloads directory
                 const downloadUrl = yield secondScraper_1.default.download(page, rows[index].downloadPageUrl, path_1.default.resolve(config_1.default.downloadedPath, title, rows[index].title));
@@ -41,7 +43,8 @@ class Main {
                 utilities_1.default.writeUrlOutput(path_1.default.resolve(config_1.default.outputAllUrl, title), downloadUrl);
             }
             console.log("Done!");
-            page.close();
+            yield page.close();
+            yield browser.close();
             process.exit();
         });
     }
