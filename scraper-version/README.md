@@ -15,7 +15,7 @@ npm install
 ```console
 npx playwright install chromium
 ```
-3. Put your target url into the .env file
+3. Put your target url into the <kbd>.env</kbd> file
 
 4. Run it
 ```console

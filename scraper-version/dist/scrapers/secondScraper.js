@@ -21,9 +21,9 @@ class SecondScraper {
     }
     static download(page, downloadPageUrl, path) {
         return __awaiter(this, void 0, void 0, function* () {
-            const ext = ".mp3";
+            const ext = ".flac";
             yield page.goto(downloadPageUrl);
-            const anchorSelector = "#pageContent > p:nth-child(10) > a";
+            const anchorSelector = "#pageContent > p:nth-child(10) > a"; //  10th child for .flac, 9th for .mp3
             const downloadPromise = page.waitForEvent("download");
             const anchor = page.locator(anchorSelector);
             yield anchor.click();
