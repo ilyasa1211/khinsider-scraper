@@ -30,7 +30,7 @@ export default class Main {
     
     // Second Page
     for (let index = 0; index < rows.length; index++) {
-      console.log(index + 1, ".", "Getting download url for: ", rows[index].title);
+      console.log(index + 1, ".", "Downloading: ", rows[index].title);
 
       // Save the downloaded file to downloads directory
       const downloadUrl = await SecondScraper.download(

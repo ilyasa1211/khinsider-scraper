@@ -20,7 +20,7 @@ class FirstScrapper {
     static getDownloadPageUrl(page, targetUrlOrigin) {
         return __awaiter(this, void 0, void 0, function* () {
             const result = [];
-            const hrefSelector = "td:nth-child(3) > a";
+            const hrefSelector = "td.clickable-row > a";
             const allRows = yield page.locator("#songlist > tbody > tr").all();
             const musicRows = allRows.slice(1, -1); // does not include row header and row footer
             for (const row of musicRows) {

@@ -33,10 +33,11 @@ class Main {
             yield page.goto(target.href);
             const title = yield firstScraper_1.default.getTitle(page);
             const rows = yield firstScraper_1.default.getDownloadPageUrl(page, target.origin);
+            console.log("Title: %s", title);
             console.log("Count: %d", rows.length);
             // Second Page
             for (let index = 0; index < rows.length; index++) {
-                console.log("Getting download url for: ", rows[index].title);
+                console.log(index + 1, ".", "Getting download url for: ", rows[index].title);
                 // Save the downloaded file to downloads directory
                 const downloadUrl = yield secondScraper_1.default.download(page, rows[index].downloadPageUrl, path_1.default.resolve(config_1.default.downloadedPath, title, rows[index].title));
                 // Write result urls to urls directory

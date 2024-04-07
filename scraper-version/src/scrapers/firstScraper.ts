@@ -18,7 +18,7 @@ export default class FirstScrapper {
     targetUrlOrigin: string
   ): Promise<FirstScrapeResult[]> {
     const result: Array<FirstScrapeResult> = [];
-    const hrefSelector = "td:nth-child(3) > a";
+    const hrefSelector = "td:nth-child(1 of .clickable-row) > a";
     const allRows = await page.locator("#songlist > tbody > tr").all();
 
     const musicRows = allRows.slice(1, -1); // does not include row header and row footer

@@ -11,10 +11,10 @@ export default class SecondScraper {
   }
 
   public static async download(page: Page, downloadPageUrl: string, path: string) {
-    const ext = ".mp3";
+    const ext = ".flac";
 
     await page.goto(downloadPageUrl);
-    const anchorSelector = "#pageContent > p:nth-child(10) > a";
+    const anchorSelector = "#pageContent > p:nth-child(10) > a"; //  10th child for .flac, 9th for .mp3
     const downloadPromise = page.waitForEvent("download");
     const anchor = page.locator(anchorSelector);
     await anchor.click();
