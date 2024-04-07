@@ -1,0 +1,16 @@
+services:
+  scraper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    environment:
+      - CHROME_EXECUTABLE_PATH=/root/.cache/ms-playwright/chromium-1112/chrome-linux/chrome
+    volumes:
+      - type: bind
+        source: ./downloads
+        target: /usr/src/app/downloads
+      - type: bind
+        source: ./urls
+        target: /usr/src/app/urls

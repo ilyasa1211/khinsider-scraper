@@ -26,7 +26,7 @@ class Main {
             const browser = yield playwright_1.chromium.launch();
             const page = yield browser.newPage();
             page.setDefaultTimeout(0);
-            console.log("Searching the url..");
+            console.log("Searching the url: ", config_1.default.targetUrl);
             // First Page
             yield page.goto(target.href);
             const title = yield firstScraper_1.default.getTitle(page);

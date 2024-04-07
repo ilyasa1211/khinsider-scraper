@@ -6,7 +6,11 @@ export default class Utilities {
   // }
 
   public static writeUrlOutput(path: string, url: string) {
-    const ext = '.txt';
-    fs.appendFileSync(path + ext, url + "\n");
+    const ext = ".txt";
+    const filename = path + ext;
+    const content = url + "\n";
+    
+
+    fs.appendFileSync(filename, content);
   }
 }

@@ -10,7 +10,7 @@ class Utilities {
     // }
     static writeUrlOutput(path, url) {
         const ext = '.txt';
-        node_fs_1.default.appendFileSync(path + ext, url);
+        node_fs_1.default.appendFileSync(path + ext, url + "\n");
     }
 }
 exports.default = Utilities;

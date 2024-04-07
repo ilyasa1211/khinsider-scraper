@@ -1,4 +1,4 @@
-import { Page, chromium } from "playwright";
+import { chromium } from "playwright";
 import Config from "./config";
 import FirstScrapper from "./scrapers/firstScraper";
 import SecondScraper from "./scrapers/secondScraper";
@@ -9,13 +9,17 @@ export default class Main {
   public static async main(): Promise<void> {
     const target = new URL(Config.targetUrl);
 
+    console.log(Config.chromeExecutablePath);
     console.log("Opening a browser...");
 
-    const browser = await chromium.launch();
+    const browser = await chromium.launch({
+      executablePath: Config.chromeExecutablePath,
+    });
+
     const page = await browser.newPage();
     page.setDefaultTimeout(0);
 
-    console.log("Searching the url..");
+    console.log("Searching the url: ", Config.targetUrl);
 
     // First Page
     await page.goto(target.href);
@@ -45,7 +49,8 @@ export default class Main {
 
     console.log("Done!");
 
-    page.close();
+    await page.close();
+    await browser.close();
 
     process.exit();
   }
