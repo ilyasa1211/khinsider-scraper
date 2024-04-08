@@ -1,7 +1,7 @@
 import { chromium } from "playwright";
 import Config from "./config";
-import FirstScrapper from "./scrapers/firstScraper";
-import SecondScraper from "./scrapers/secondScraper";
+import FirstScrapper from "./scrapers/first-scraper";
+import SecondScraper from "./scrapers/second-scraper";
 import Utilities from "./utilities";
 import path from "path";
 

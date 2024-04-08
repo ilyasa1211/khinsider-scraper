@@ -14,8 +14,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const playwright_1 = require("playwright");
 const config_1 = __importDefault(require("./config"));
-const firstScraper_1 = __importDefault(require("./scrapers/firstScraper"));
-const secondScraper_1 = __importDefault(require("./scrapers/secondScraper"));
+const first_scraper_1 = __importDefault(require("./scrapers/first-scraper"));
+const second_scraper_1 = __importDefault(require("./scrapers/second-scraper"));
 const utilities_1 = __importDefault(require("./utilities"));
 const path_1 = __importDefault(require("path"));
 class Main {
@@ -31,15 +31,15 @@ class Main {
             console.log("Searching the url: ", config_1.default.targetUrl);
             // First Page
             yield page.goto(target.href);
-            const title = yield firstScraper_1.default.getTitle(page);
-            const rows = yield firstScraper_1.default.getDownloadPageUrl(page, target.origin);
+            const title = yield first_scraper_1.default.getTitle(page);
+            const rows = yield first_scraper_1.default.getDownloadPageUrl(page, target.origin);
             console.log("Title: %s", title);
             console.log("Count: %d", rows.length);
             // Second Page
             for (let index = 0; index < rows.length; index++) {
                 console.log(index + 1, ".", "Downloading: ", rows[index].title);
                 // Save the downloaded file to downloads directory
-                const downloadUrl = yield secondScraper_1.default.download(page, rows[index].downloadPageUrl, path_1.default.resolve(config_1.default.downloadedPath, title, rows[index].title));
+                const downloadUrl = yield second_scraper_1.default.download(page, rows[index].downloadPageUrl, path_1.default.resolve(config_1.default.downloadedPath, title, rows[index].title));
                 // Write result urls to urls directory
                 utilities_1.default.writeUrlOutput(path_1.default.resolve(config_1.default.outputAllUrl, title), downloadUrl);
             }
