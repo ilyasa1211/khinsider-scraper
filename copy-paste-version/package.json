@@ -1,7 +1,8 @@
 {
   "type": "module",
   "scripts": {
-    "build": "npx webpack --config webpack.config.js"
+    "build": "npx webpack --config webpack.config.js",
+    "test": "echo \"Entry for Github Action\""
   },
   "devDependencies": {
     "ts-loader": "^9.5.1",

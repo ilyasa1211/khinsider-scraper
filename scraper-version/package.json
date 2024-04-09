@@ -16,7 +16,8 @@
   "scripts": {
     "build": "tsc",
     "start": "node --env-file .app.env ./dist",
-    "command": "node ./dist/commands"
+    "command": "node ./dist/commands",
+    "test": "echo \"Entry for Github Action\""
   },
   "repository": {
     "type": "git",
