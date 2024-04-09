@@ -4,6 +4,7 @@ This is a script for getting all links in a some download for direct downloads i
 Because the website cannot download all songlist at once
 
 # How To Use
+
 1. **Go to khinsider.com** and find what you want to donwload. In this example, I'm looking to download plant vs zombie music.
 
 ![1](https://user-images.githubusercontent.com/110075636/230800726-f8b6111c-36b1-4b7f-987a-3240ddd6c8a9.png)
@@ -27,6 +28,12 @@ Because the website cannot download all songlist at once
 ![7](https://user-images.githubusercontent.com/110075636/230801388-d9f93847-ce31-4ec7-9921-6a16b7380aa1.png)
 
 7. That's it your get all the links you want.
+
+## Compile
+
+```console
+docker compose up --build
+```
 
 # How To Download
 
