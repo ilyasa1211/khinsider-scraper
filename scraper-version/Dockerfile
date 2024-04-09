@@ -1,12 +1,11 @@
 
 ARG NODE_VERSION=21.0.0
-ARG TARGET_URL
 
 FROM node:${NODE_VERSION}-bookworm AS build
 
-ENV CHROME_EXECUTABLE_PATH=/root/.cache/ms-playwright/chromium-1112/chrome-linux/chrome
+ARG DOCKER_WORKDIR
 
-WORKDIR /usr/src/app
+WORKDIR ${DOCKER_WORKDIR}
 
 COPY package.json package-lock.json ./
 
